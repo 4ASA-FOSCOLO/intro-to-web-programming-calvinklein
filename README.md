@@ -5,3 +5,8 @@
 [LINK](https://4asa-foscolo.github.io/intro-to-web-programming-calvinklein/)
 
 [EDIT ONLINE](https://github.dev/4ASA-FOSCOLO/intro-to-web-programming-calvinklein)
+
+# TO DO 
+- specificare la preparazione  -> pagina principale che porta a un'altra pagine
+- hero section immagini
+- usare section e div
