@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pasta al Pomodoro</title>
+    <title>Pasta al Pomodoro</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .stars {
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .star {
+            color: gray;
+            transition: 0.2s;
+        }
+
+        .star.active {
+            color: gold;
+        }
+    </style>
 </head>
 
 <body>
 
 <section>
     <h1>🍝 Pasta al Pomodoro</h1>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Red_sauce_pasta.jpg" width="400">
 
     <h2>Preparazione</h2>
     <p>
@@ -18,9 +41,48 @@
     5. Servi caldo.
     </p>
 
+    <h2>⭐ Dai un voto</h2>
+
+    <div class="stars">
+        <span class="star" onclick="rate(1)">★</span>
+        <span class="star" onclick="rate(2)">★</span>
+        <span class="star" onclick="rate(3)">★</span>
+        <span class="star" onclick="rate(4)">★</span>
+        <span class="star" onclick="rate(5)">★</span>
+    </div>
+
+    <p id="voteText"></p>
+
     <br>
     <a href="index.html">⬅ Torna alla home</a>
 </section>
+
+<script>
+    let stars = document.querySelectorAll('.star');
+
+    function rate(n) {
+        localStorage.setItem("pastaRating", n);
+        updateStars(n);
+    }
+
+    function updateStars(rating) {
+        stars.forEach((star, index) => {
+            if(index < rating){
+                star.classList.add("active");
+            } else {
+                star.classList.remove("active");
+            }
+        });
+
+        document.getElementById("voteText").innerText =
+            "Hai dato " + rating + " stelle!";
+    }
+
+    let saved = localStorage.getItem("pastaRating");
+    if(saved){
+        updateStars(saved);
+    }
+</script>
 
 </body>
 </html>
