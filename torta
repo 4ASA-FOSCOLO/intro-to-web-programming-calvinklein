@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Torta</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="ricetta">
+
+<h1>🍰 Torta al Cioccolato</h1>
+
+<p>
+
+1. Mescola ingredienti.<br>
+
+2. Versa nello stampo.<br>
+
+3. Cuoci a 180°C.<br>
+
+4. Lascia raffreddare.
+
+</p>
+
+<a href="index.html">Torna alla home</a>
+
+</section>
+
+</body>
+
+</html>
